@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1261.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sinari.Add_ItemDatabaseController">
+    <children>
+        <Button fx:id="bt_AddVehicle" layoutX="1154.0" layoutY="51.0" mnemonicParsing="false" onAction="#open_AddVehicleWindow" text="Add Vehicle" />
+        <Button fx:id="bt_Delete" layoutX="933.0" layoutY="488.0" mnemonicParsing="false" onAction="#removeSelectedRow" prefHeight="25.0" prefWidth="302.0" text="Delete" />
+        <Button fx:id="bt_Add" layoutX="934.0" layoutY="368.0" mnemonicParsing="false" onAction="#Add_to_Database" prefHeight="25.0" prefWidth="302.0" text="Add" />
+        <Button fx:id="bt_Search" layoutX="934.0" layoutY="409.0" mnemonicParsing="false" onAction="#open_SearchWindow" prefHeight="25.0" prefWidth="302.0" text="Search" />
+        <TableView fx:id="tb_main" layoutX="32.0" layoutY="55.0" prefHeight="462.0" prefWidth="815.0">
+            <columns>
+                <TableColumn fx:id="col1_ItemCode" prefWidth="130.0" text="Item Code" />
+                <TableColumn fx:id="col2_VehicleCode" prefWidth="123.0" text="Vehicle Code" />
+                <TableColumn fx:id="col3_ItemName" prefWidth="303.0" text="Item Name" />
+                <TableColumn fx:id="col4_UnitPrice" prefWidth="164.0" text="Unit Price" />
+                <TableColumn fx:id="col5_Quantity" prefWidth="94.0" text="Quantity" />
+            </columns>
+         <contextMenu>
+            <ContextMenu>
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+        </TableView>
+        <Label layoutX="921.0" layoutY="108.0" prefHeight="20.0" prefWidth="37.0" text="Item:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="922.0" layoutY="145.0" text="Vehicle Code:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="919.0" layoutY="179.0" text="Item Name:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_Item" layoutX="1085.0" layoutY="108.0" />
+        <TextField fx:id="tf_ItemName" layoutX="1085.0" layoutY="179.0" />
+        <Label layoutX="744.0" layoutY="585.0" prefHeight="25.0" prefWidth="96.0" textOverrun="WORD_ELLIPSIS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="598.0" layoutY="588.0" prefHeight="20.0" prefWidth="85.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button fx:id="bt_Edit" layoutX="933.0" layoutY="448.0" mnemonicParsing="false" onAction="#editSelectedRow" prefHeight="25.0" prefWidth="302.0" text="Edit" />
+        <Separator layoutX="875.0" layoutY="80.0" orientation="VERTICAL" prefHeight="441.0" prefWidth="22.0" />
+      <Label layoutX="919.0" layoutY="217.0" text="Unit Price:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="919.0" layoutY="258.0" text="Quantity:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_UnitPrice" layoutX="1085.0" layoutY="217.0" />
+      <TextField fx:id="tf_VehicleCode" layoutX="1085.0" layoutY="145.0">
+         <contextMenu>
+            <ContextMenu fx:id="ContexMenu_VehicleCode">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_Quantity" layoutX="1085.0" layoutY="258.0" />
+    </children>
+</Pane>

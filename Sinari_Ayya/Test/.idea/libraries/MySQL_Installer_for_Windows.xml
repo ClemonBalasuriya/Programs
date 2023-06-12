@@ -1,0 +1,14 @@
+<component name="libraryTable">
+  <library name="MySQL Installer for Windows">
+    <CLASSES />
+    <JAVADOC />
+    <NATIVE>
+      <root url="file://C:/Program Files (x86)/MySQL/MySQL Installer for Windows" />
+      <root url="file://C:/Program Files (x86)/MySQL/MySQL Installer for Windows" />
+      <root url="file://C:/Program Files (x86)/MySQL/MySQL Installer for Windows" />
+      <root url="file://C:/Program Files (x86)/MySQL/MySQL Installer for Windows" />
+      <root url="file://C:/Program Files (x86)/MySQL/MySQL Installer for Windows" />
+    </NATIVE>
+    <SOURCES />
+  </library>
+</component>

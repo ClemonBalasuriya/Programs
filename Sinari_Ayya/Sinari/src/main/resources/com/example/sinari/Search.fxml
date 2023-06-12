@@ -1,0 +1,143 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.ContextMenu?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.Separator?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<Pane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="580.0" prefWidth="1243.0" xmlns="http://javafx.com/javafx/19" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.example.sinari.SearchController">
+    <children>
+        <Button layoutX="1068.0" layoutY="26.0" mnemonicParsing="false" onAction="#search" prefHeight="25.0" prefWidth="150.0" text="Search" />
+        <TableView fx:id="tb_main" layoutX="37.0" layoutY="125.0" prefHeight="395.0" prefWidth="1188.0">
+            <columns>
+                <TableColumn fx:id="col1_VehicleCode" prefWidth="123.0" text="Vehicle Code" />
+            <TableColumn fx:id="col2_ItemCode" minWidth="0.0" prefWidth="125.0" text="Item Code" />
+                <TableColumn fx:id="col3_Brand" prefWidth="114.0" text="Brand" />
+                <TableColumn fx:id="col4_Model" prefWidth="120.0" text="Model" />
+            <TableColumn fx:id="col5_ItemName" prefWidth="263.0" text="Item Name" />
+                <TableColumn fx:id="col6_VehicleType" prefWidth="119.0" text="Vehicle Type" />
+                <TableColumn fx:id="col7_ModelYear" prefWidth="72.0" text="Model Year" />
+            <TableColumn fx:id="col8_UnitPrice" prefWidth="101.0" text="Unit Price" />
+                <TableColumn fx:id="col9_GasolineType" minWidth="0.0" prefWidth="91.0" text="Gasoline Type" />
+            <TableColumn fx:id="col10_Quantity" minWidth="1.0" prefWidth="59.0" text="Quantity" />
+            </columns>
+        </TableView>
+        <Label layoutX="271.0" layoutY="25.0" prefHeight="25.0" prefWidth="96.0" text="Vehicle Code:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="271.0" layoutY="60.0" text="Brand:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="557.0" layoutY="25.0" text="Model:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="744.0" layoutY="585.0" prefHeight="25.0" prefWidth="96.0" textOverrun="WORD_ELLIPSIS">
+            <font>
+                <Font name="System Bold" size="14.0" />
+            </font>
+        </Label>
+        <Label layoutX="598.0" layoutY="588.0" prefHeight="20.0" prefWidth="85.0">
+            <font>
+                <Font size="14.0" />
+            </font>
+        </Label>
+        <Button layoutX="1068.0" layoutY="60.0" mnemonicParsing="false" onAction="#clearTable" prefHeight="25.0" prefWidth="150.0" text="Refresh" />
+        <Label layoutX="557.0" layoutY="60.0" text="Model Year:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <Label layoutX="794.0" layoutY="60.0" text="Vehicle Type:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+        <TextField fx:id="tf_ModelYear" layoutX="654.0" layoutY="60.0" prefHeight="25.0" prefWidth="71.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_ModelYear">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+        <Label layoutX="794.0" layoutY="25.0" text="Gasoline Type:">
+            <font>
+                <Font size="16.0" />
+            </font>
+        </Label>
+      <Separator layoutY="97.0" prefHeight="11.0" prefWidth="1243.0" />
+      <Label layoutX="37.0" layoutY="25.0" prefHeight="25.0" prefWidth="49.0" text="Item:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <Label layoutX="37.0" layoutY="60.0" prefHeight="25.0" prefWidth="84.0" text="Item Code:">
+         <font>
+            <Font size="16.0" />
+         </font>
+      </Label>
+      <TextField fx:id="tf_Item" layoutX="86.0" layoutY="25.0" prefHeight="25.0" prefWidth="176.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_Item">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_ItemCode" layoutX="121.0" layoutY="60.0" prefHeight="25.0" prefWidth="143.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_ItemCode">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_VehicleCode" layoutX="376.0" layoutY="26.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_VehicleCode">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_Brand" layoutX="376.0" layoutY="60.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_Brand">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_Model" layoutX="622.0" layoutY="25.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_Model">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu></TextField>
+      <TextField fx:id="tf_VehicleType" layoutX="903.0" layoutY="60.0">
+         <contextMenu>
+            <ContextMenu fx:id="CM_VehicleType">
+              <items>
+                <MenuItem mnemonicParsing="false" text="Unspecified Action" />
+              </items>
+            </ContextMenu>
+         </contextMenu>
+      </TextField>
+      <ChoiceBox fx:id="CB_GasolineType" layoutX="902.0" layoutY="26.0" prefWidth="150.0" />
+    </children>
+</Pane>
